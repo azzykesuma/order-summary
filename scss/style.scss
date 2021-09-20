@@ -20,6 +20,7 @@ body {
     background-repeat: no-repeat;
     background-color : $Pale-blue;
     display: block;
+
     @include mQ(1200px) {
         background-image: url('../images/pattern-background-desktop.svg');
     }
@@ -29,6 +30,7 @@ body {
     padding : 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -36,7 +38,11 @@ body {
     margin-block: 50px;
     background: white;
     border-radius: 20px;
-    max-width: 350px;
+    max-width: 450px;
+
+    @include mQ(1200px) {
+        margin-block: 100px;
+    }
 
     .cardHeader {
         background-image: url('../images/illustration-hero.svg');
@@ -45,11 +51,22 @@ body {
         height : 160px;
         width : 100%;
         border-radius: 20px 20px 0 0;
+
+        @include mQ(1200px) {
+            background-size: 30em;
+            height : 220px;
+        }
     }
 
     .mainCard {
         padding : 30px;
         text-align: center;
+
+        @include mQ(1200px) {
+            padding-inline : 50px;
+            padding-block : 50px 20px;
+        }
+
 
         h1 {
             color : $Dark-blue;
@@ -88,6 +105,11 @@ body {
         flex-direction: column;
         padding : 30px;
         align-items: center;
+
+        @include mQ(1200px) {
+            padding-inline : 50px;
+        }
+
 
         button {
             border : none;
