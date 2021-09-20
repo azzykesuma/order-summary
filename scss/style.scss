@@ -1,0 +1,112 @@
+@import 'mixin.scss';
+
+// primary var
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+// neutral var
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display',sans-serif;
+    background-image: url('../images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-color : $Pale-blue;
+    display: block;
+    @include mQ(1200px) {
+        background-image: url('../images/pattern-background-desktop.svg');
+    }
+}
+
+.main {
+    padding : 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: block;
+    margin-block: 50px;
+    background: white;
+    border-radius: 20px;
+    max-width: 350px;
+
+    .cardHeader {
+        background-image: url('../images/illustration-hero.svg');
+        background-repeat: no-repeat;
+        background-size: 22em;
+        height : 160px;
+        width : 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .mainCard {
+        padding : 30px;
+        text-align: center;
+
+        h1 {
+            color : $Dark-blue;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color : $Desaturated-blue;
+        }
+    }
+
+    .cardBill {
+        margin-top: 20px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       background: $Very-pale-blue;
+       padding : 20px;
+       border-radius: 5px;
+
+        .leftPart {
+            display: flex;
+            align-items: center;
+            gap : 20px;
+
+            .annual {
+                color : $Dark-blue;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .bottomPart {
+        display: flex;
+        flex-direction: column;
+        padding : 30px;
+        align-items: center;
+
+        button {
+            border : none;
+            border-radius: 10px;
+            background : $Bright-blue;
+            padding : 10px;
+            color : white;
+            font-family: 'Red Hat Display',sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            width : 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 7px 5px -2px rgba(0,0,0,0.3);
+        }
+
+        .cancel {
+            color : $Desaturated-blue;
+            text-decoration: none;
+            font-weight: 900;
+        }
+    }
+}

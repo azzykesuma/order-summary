@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: #e0e8ff;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+.main {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  display: block;
+  margin-block: 50px;
+  background: white;
+  border-radius: 20px;
+  max-width: 350px;
+}
+.card .cardHeader {
+  background-image: url("../images/illustration-hero.svg");
+  background-repeat: no-repeat;
+  background-size: 22em;
+  height: 160px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.card .mainCard {
+  padding: 30px;
+  text-align: center;
+}
+.card .mainCard h1 {
+  color: #1f2f56;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.card .mainCard p {
+  color: #7280a7;
+}
+.card .cardBill {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f5f7ff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.card .cardBill .leftPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.card .cardBill .leftPart .annual {
+  color: #1f2f56;
+  font-weight: 700;
+}
+.card .bottomPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card .bottomPart button {
+  border: none;
+  border-radius: 10px;
+  background: #3829e0;
+  padding: 10px;
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.3);
+}
+.card .bottomPart .cancel {
+  color: #7280a7;
+  text-decoration: none;
+  font-weight: 900;
+}
